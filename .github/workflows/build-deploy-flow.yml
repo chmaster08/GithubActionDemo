@@ -1,19 +1,20 @@
 name: Build and Deploy Next.js site
 on:
-  push:
+    push:
     branches:
-      - main
+        - main
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+    contents: read
+    pages: write
+    id-token: write
 
 jobs:
     ci-build:
         runs-on: ubuntu-latest
         steps:
             - name: リポジトリをチェックアウト
-            uses: actions/checkout@v4  
+            uses: actions/checkout@v4
+            
             - name: Node.js のセットアップ
             uses: actions/setup-node@v4
             with:
